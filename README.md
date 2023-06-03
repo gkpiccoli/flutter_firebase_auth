@@ -17,7 +17,8 @@ Pode deixar o Analytics ativado.
 Criar projeto (...)
 
 3 - Atualizar o arquivo build.gradle:
+```
 dependencies: 
-classpath 'com.google.gms:google-services:4.3.10' para
+classpath 'com.google.gms:google-services:4.3.10' para >>>
 classpath 'com.google.gms:google-services:4.3.14'
-
+```
