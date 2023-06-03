@@ -5,6 +5,7 @@ A new Flutter project.
 1 - Adicionar as seguintes dependências ao pubspec.yaml:
 
         ```
+        
         firebase_auth: ^4.6.2
         firebase_core: ^2.13.1
         ```
