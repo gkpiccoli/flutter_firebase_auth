@@ -17,6 +17,6 @@ firebase_core: ^2.13.1
 3 - Atualizar o arquivo build.gradle:
 ```
 dependencies: 
-classpath 'com.google.gms:google-services:4.3.10' para >>>
+
 classpath 'com.google.gms:google-services:4.3.14'
 ```
