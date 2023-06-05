@@ -8,7 +8,17 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
+final TextEditingController emailController = TextEditingController();
+final TextEditingController passwordController = TextEditingController();
+
 class _LoginPageState extends State<LoginPage> {
+
+  @override void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -44,9 +54,10 @@ class _LoginPageState extends State<LoginPage> {
                     )
                 ),
                 width: MediaQuery.of(context).size.width * .7,
-                child: const TextField(
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                  decoration: InputDecoration(
+                child:  TextField(
+                  controller: passwordController,
+                  style: const TextStyle(color: Colors.black, fontSize: 20),
+                  decoration: const InputDecoration(
                       hintText: 'Digite sua senha',
                       hintStyle:TextStyle(color: Colors.black, fontSize: 16),
                       border: InputBorder.none
@@ -56,8 +67,8 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            ElevatedButton(onPressed: (){}, child: Text('Entrar')),
-            ElevatedButton(onPressed: (){}, child: Text('Cadastrar-se'))
+            ElevatedButton(onPressed: (){}, child: const Text('Entrar')),
+            ElevatedButton(onPressed: (){}, child: const Text('Cadastrar-se'))
           ],
         ),
       ),
