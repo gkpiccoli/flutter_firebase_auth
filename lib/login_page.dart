@@ -32,11 +32,10 @@ class _LoginPageState extends State<LoginPage> {
                   hintStyle:TextStyle(color: Colors.black, fontSize: 16),
                   border: InputBorder.none
                 ),
-
-
               ),
             ),
           ),
+            const SizedBox(height: 20,),
             Center(
               child: Container(
                 decoration: BoxDecoration(
@@ -57,7 +56,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-          ]
+            ElevatedButton(onPressed: (){}, child: Text('Entrar')),
+            ElevatedButton(onPressed: (){}, child: Text('Cadastrar-se'))
+          ],
         ),
       ),
     );
